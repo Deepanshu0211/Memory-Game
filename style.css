@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #111;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  gap: 10px;
+  max-width: 600px; /* Set a max-width for larger screens */
+}
+
+.square {
+  width: 100%;
+  height: 80px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px; /* Adjust font size for smaller screens */
+  cursor: pointer;
+  transition: box-shadow 0.3s, background-color 0.3s; /* Add background color to transition */
+}
+
+.square:hover {
+  background-color: #555;
+}
+
+.square.active {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.instruction-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #e6dfdfa9;
+  font-family: 'Manrope', sans-serif;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(132, 0, 255), 0 0 20px #0ff, 0 0 40px rgb(1, 8, 8);  z-index: 1000;
+  max-width: 80%; /* Set a max-width for larger screens */
+  transition: 0.7s;
+}
+.instruction-panel button{
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  transition: 0.7s;
+  margin-top: 15px; /* Add some space between text and button */
+}
+.instruction-panel button:hover {
+  background-color: #112635;
+  transition: 0.7s;
+}
+
+.instruction-header{
+  font-size: 42px;
+  display: flex;
+  position: fixed;
+  color: gray;
+  transform: translate(50%, -50%);
+  font-family: 'Bebas Neue', sans-serif;
+  top: 1.5em;
+  right: 50%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.difficulty-buttons {
+  position: fixed;
+ 
+  
+  transform: translate(50%, -50%);
+  top: 20%;
+  right: 50%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.difficulty-buttons button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #6f4caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.difficulty-buttons button:hover {
+  background-color: #8b45a0;
+}
+
+@media (max-width: 600px) {
+  .square {
+    height: 80px; /* Adjust height for smaller screens */
+  }
+
+  .game-container {
+    grid-template-columns: repeat(2, minmax(60px, 1fr));
+  }
+
+  .instruction-panel {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Memory Game</title>
+</head>
+<body>
+  <div class="instruction-header">
+  
+    <p>Choose a difficulty level to start the game:</p>
+  </div>
+  <!-- Add this HTML code at the top of your body -->
+<div class="instruction-panel" id="instructionPanel">
+  <h2>Memory Game</h2>
+  <p>Welcome to the Memory Game! Click on the squares to repeat the sequence.</p>
+  <p>Try to remember and repeat the sequence to advance to the next round.</p>
+  <p>Choose your difficulty level and click on the squares to get started!</p>
+  <button onclick="startGame()">Start Game</button>
+</div>
+
+  <div class="game-container" id="gameContainer">
+    <!-- Your squares will go here -->
+  </div>
+  <!-- Add these buttons to your HTML file -->
+<div class="difficulty-buttons">
+  <button onclick="setDifficulty('easy')">Easy</button>
+  <button onclick="setDifficulty('medium')">Medium</button>
+  <button onclick="setDifficulty('hard')">Hard</button>
+</div>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
